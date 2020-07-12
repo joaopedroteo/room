@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    tools:context=".TaskDetailActivity">
+
+    <TextView
+        android:id="@+id/detailTitleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Titulo"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/detailCompletedTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Terminou"
+        app:layout_constraintTop_toBottomOf="@+id/detailTitleTextView"
+        app:layout_constraintStart_toStartOf="@+id/detailTitleTextView"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <CheckBox
+        android:id="@+id/detailCompletedCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Completed"
+        app:layout_constraintTop_toBottomOf="@+id/detailCompletedTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/detailAssignViewModel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_margin="16dp"
+        android:text="Assign to: "
+        app:layout_constraintTop_toBottomOf="@+id/detailCompletedCheckBox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/detailDeleteButton" />
+
+    <Spinner
+        android:id="@+id/detailUserSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/detailAssignViewModel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <Button
+        android:id="@+id/detailDeleteButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Delete task"
+        app:layout_constraintTop_toBottomOf="@+id/detailUserSpinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
